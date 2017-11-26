@@ -9,6 +9,14 @@ public class Currency {
     private String cc;
     private Date exchangeDate;
 
+    public Currency() {
+        this.code = 0;
+        this.txt = "";
+        this.exchangeRate = 0.0;
+        this.cc = "";
+        this.exchangeDate = null;
+    }
+
     public Currency(int code, String txt, double exchangeRate, String cc, Date exchangeDate) {
         this.code = code;
         this.txt = txt;
