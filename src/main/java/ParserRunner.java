@@ -22,27 +22,27 @@ public class ParserRunner {
         parcerTypes.put(Service.HTML, new ParcerHTML());
 
         Parser parcer = parcerTypes.get(Service.DOMXML);
-//        System.out.println("*1111111111111111111111111111111111111111111111111111111111*");
-//
-//        try {
-//            URL url = new URL("http://bank.gov.ua/NBUStatService/v1/statdirectory/exchange");
-//            URLConnection connection = url.openConnection();
-//            connection.getURL();
-//            connection.addRequestProperty("User-Agent", "Mozilla/5.0");
-//
-//            List<Currency> curs = parcer.parse(connection.getInputStream());
-//
-//            System.out.println(curs);
-//            for (Currency value: curs
-//                 ) {
-//                if (value.getCode() == 840) {
-//                    System.out.println(value);
-//                }
-//            }
-//
-//        } catch ( Exception e ) {
-//            e.printStackTrace();
-//        }
+        System.out.println("*1111111111111111111111111111111111111111111111111111111111*");
+
+        try {
+            URL url = new URL("http://bank.gov.ua/NBUStatService/v1/statdirectory/exchange");
+            URLConnection connection = url.openConnection();
+            connection.getURL();
+            connection.addRequestProperty("User-Agent", "Mozilla/5.0");
+
+            List<Currency> curs = parcer.parse(connection.getInputStream());
+
+            System.out.println(curs);
+            for (Currency value: curs
+                 ) {
+                if (value.getCode() == 840) {
+                    System.out.println(value);
+                }
+            }
+
+        } catch ( Exception e ) {
+            e.printStackTrace();
+        }
 
         parcer = parcerTypes.get(Service.SAXXML);
         System.out.println("*222222222222222222222222222222222222222222222222222222222222*");
