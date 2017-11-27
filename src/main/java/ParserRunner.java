@@ -104,7 +104,7 @@ public class ParserRunner {
             System.out.println(curs);
             for (Currency value: curs
                     ) {
-                if (value.getCode() == 840) {
+                if (value.getTxt().equals("ДОЛЛАР")) {
                     System.out.println(value);
                 }
             }

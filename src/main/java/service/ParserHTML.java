@@ -29,17 +29,17 @@ public class ParserHTML implements Parser {
                 "августа","сентября","октября","ноября","декабря"};
 
         Elements rows = table.select("tr");
-        System.out.println(rows.size());
+        //System.out.println(rows.size());
         for (int i = 1; i < rows.size() - 1; i++) { //first row is the col names so skip it.
             Element row = rows.get(i);
             Elements cols = row.select("td");
 
             //System.out.println(rows.get(i));
-            System.out.print(cols.get(0).selectFirst("a").text() + " ");
+            //System.out.print(cols.get(0).selectFirst("a").text() + " ");
             String txt = cols.get(0).selectFirst("a").text();
-            System.out.print(cols.get(1).ownText() + " ");
+            //System.out.print(cols.get(1).ownText() + " ");
             double rate =  new Double(cols.get(1).ownText());
-            System.out.println(cols.get(3).selectFirst("small").ownText());
+            //System.out.println(cols.get(3).selectFirst("small").ownText());
             DateFormat df = new SimpleDateFormat("dd MM yyyy");
 
             String dateForReplace = cols.get(3).selectFirst("small").ownText();
