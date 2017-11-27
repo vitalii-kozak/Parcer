@@ -25,8 +25,8 @@ public class ParserHTML implements Parser {
         Document doc = Jsoup.parse(stream, "UTF-8", "");
         Element table = doc.select("table").get(0); //select the first table.
         List <Currency> result = new ArrayList<>();
-        String[] monthList = {"января", "февраля","марта","Апреля","Мая","Июня","Июля",
-                "Августа","Сентября","Октября","ноября","Декабря"};
+        String[] monthList = {"января", "февраля","марта","апреля","мая","июня","июля",
+                "августа","сентября","октября","ноября","декабря"};
 
         Elements rows = table.select("tr");
         System.out.println(rows.size());
