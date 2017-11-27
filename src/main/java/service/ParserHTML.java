@@ -5,7 +5,7 @@ import domain.Currency;
 import java.io.InputStream;
 import java.util.List;
 
-public class ParcerJson implements Parser {
+public class ParserHTML implements Parser {
 
 
     @Override

@@ -1,12 +1,20 @@
 package domain;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.Date;
 
+
 public class Currency {
+    @SerializedName("r030")
     private int code;
+    @SerializedName("txt")
     private String txt;
+    @SerializedName("rate")
     private double exchangeRate;
+    @SerializedName("cc")
     private String cc;
+    @SerializedName("exchangedate")
     private Date exchangeDate;
 
     public Currency() {
