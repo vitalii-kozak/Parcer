@@ -67,11 +67,34 @@ public class ParserRunner {
 //            e.printStackTrace();
 //        }
 
-        parcer = parcerTypes.get(Service.JSON);
-        System.out.println("*3333333333333333333333333333333333333333333333333333333333333333*");
+//        parcer = parcerTypes.get(Service.JSON);
+//        System.out.println("*3333333333333333333333333333333333333333333333333333333333333333*");
+//
+//        try {
+//            URL url = new URL("http://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json");
+//            URLConnection connection = url.openConnection();
+//            connection.getURL();
+//            connection.addRequestProperty("User-Agent", "Mozilla/5.0");
+//
+//            List<Currency> curs = parcer.parse(connection.getInputStream());
+//
+//            System.out.println(curs);
+//            for (Currency value: curs
+//                    ) {
+//                if (value.getCode() == 840) {
+//                    System.out.println(value);
+//                }
+//            }
+//
+//        } catch ( Exception e ) {
+//            e.printStackTrace();
+//        }
+
+        parcer = parcerTypes.get(Service.HTML);
+        System.out.println("*444444444444444444444444444444444444444444444444444444444444444444*");
 
         try {
-            URL url = new URL("http://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json");
+            URL url = new URL("https://minfin.com.ua/currency/nbu/");
             URLConnection connection = url.openConnection();
             connection.getURL();
             connection.addRequestProperty("User-Agent", "Mozilla/5.0");
